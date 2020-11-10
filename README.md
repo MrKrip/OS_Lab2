@@ -54,7 +54,7 @@ PageAllocator aloc = PageAllocator(10*PageSize);
 aloc.mem_dump();
 ```
 ##### Результат
-!(pictures/PageAlloc.PNG)
+![Создание аллокатора](pictures/PageAlloc.PNG)
 
 На данный момент все 10 страничек свободны
 
@@ -72,7 +72,7 @@ void* a1 =aloc.mem_alloc(200);
 ```
 
 ##### Результат
-!(pictures/mem_alloc.PNG)
+![Выделение блоков памяти заданого размера](pictures/mem_alloc.PNG)
 
 Пример аллоцирования блоков
 
@@ -87,7 +87,7 @@ aloc.mem_free(a1);
 ```
 Пример освобождения блоков
 ##### Результат
-!(pictures/mem_free.PNG)
+![Освобождение прежде выделенных блоков](pictures/mem_free.PNG)
 ---
 ### Изменение размера блока
 #### Мы изменили размер блока с 300 байт до размара 4 страниц
@@ -98,6 +98,6 @@ void* a6 = aloc.mem_realloc(a2,4*PageSize);
 ```
 
 ##### Результат
-!(pictures/mem_realoc.PNG)
+![Изменение размера блока](pictures/mem_realoc.PNG)
 ---
 
